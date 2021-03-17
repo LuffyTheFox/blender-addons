@@ -115,7 +115,7 @@ class ImportOBJ(bpy.types.Operator, ImportHelper):
             description="Clamp bounds under this value (zero to disable)",
             min=0.0, max=1000.0,
             soft_min=0.0, soft_max=1000.0,
-            default=1.0,
+            default=10.0,
             )
 
     def execute(self, context):
