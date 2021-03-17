@@ -326,12 +326,12 @@ class ExportOBJ(bpy.types.Operator, ExportHelper):
     use_blen_objects: BoolProperty(
             name="OBJ Objects",
             description="Export Blender objects as OBJ objects",
-            default=True,
+            default=False,
             )
     group_by_object: BoolProperty(
             name="OBJ Groups",
             description="Export Blender objects as OBJ groups",
-            default=False,
+            default=True,
             )
     group_by_material: BoolProperty(
             name="Material Groups",
