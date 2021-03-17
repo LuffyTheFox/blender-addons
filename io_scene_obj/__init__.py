@@ -87,7 +87,7 @@ class ImportOBJ(bpy.types.Operator, ImportHelper):
     use_split_groups: BoolProperty(
             name="Group",
             description="Import OBJ Groups into Blender Objects",
-            default=False,
+            default=True,
             )
 
     use_groups_as_vgroups: BoolProperty(
@@ -115,7 +115,7 @@ class ImportOBJ(bpy.types.Operator, ImportHelper):
             description="Clamp bounds under this value (zero to disable)",
             min=0.0, max=1000.0,
             soft_min=0.0, soft_max=1000.0,
-            default=0.0,
+            default=10.0,
             )
 
     def execute(self, context):
@@ -252,7 +252,7 @@ class ExportOBJ(bpy.types.Operator, ExportHelper):
     use_selection: BoolProperty(
             name="Selection Only",
             description="Export selected objects only",
-            default=False,
+            default=True,
             )
     use_animation: BoolProperty(
             name="Animation",
@@ -282,7 +282,7 @@ class ExportOBJ(bpy.types.Operator, ExportHelper):
     use_smooth_groups: BoolProperty(
             name="Smooth Groups",
             description="Write sharp edges as smooth groups",
-            default=False,
+            default=True,
             )
     use_smooth_groups_bitflags: BoolProperty(
             name="Bitflag Smooth Groups",
@@ -347,7 +347,7 @@ class ExportOBJ(bpy.types.Operator, ExportHelper):
     global_scale: FloatProperty(
             name="Scale",
             min=0.01, max=1000.0,
-            default=1.0,
+            default=100.0,
             )
 
     path_mode: path_reference_mode
